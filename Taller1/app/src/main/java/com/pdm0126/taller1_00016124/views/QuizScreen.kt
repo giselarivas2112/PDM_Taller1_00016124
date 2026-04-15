@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -28,8 +29,8 @@ fun QuizScreen(
 
     val question = questionList[questionIndex]
 
-    var selectedIndex by remember(questionIndex) { mutableStateOf(-1) }
-    var answered by remember(questionIndex) { mutableStateOf(false) }
+    var selectedIndex by rememberSaveable(questionIndex) { mutableStateOf(-1) }
+    var answered by rememberSaveable(questionIndex) { mutableStateOf(false) }
 
     Column(
         modifier = Modifier.fillMaxSize().padding(20.dp),

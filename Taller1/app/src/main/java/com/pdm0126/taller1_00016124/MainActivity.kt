@@ -8,6 +8,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import com.pdm0126.taller1_00016124.ui.theme.AndroidPediaByRivasTheme
 import com.pdm0126.taller1_00016124.views.QuizScreen
@@ -22,9 +23,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidPediaByRivasTheme {
 
-                var screen by remember { mutableStateOf("welcome") }
-                var currentQuestionIndex by remember { mutableIntStateOf(0) }
-                var score by remember { mutableIntStateOf(0) }
+                var screen by rememberSaveable { mutableStateOf("welcome") }
+                var currentQuestionIndex by rememberSaveable { mutableIntStateOf(0) }
+                var score by rememberSaveable { mutableIntStateOf(0) }
 
                 when (screen) {
 
