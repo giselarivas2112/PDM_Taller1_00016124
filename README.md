@@ -1,1 +1,3 @@
 # PDM_Taller1_00016124
+
+Link del video explicativo: https://ucaedusv-my.sharepoint.com/:v:/g/personal/00016124_uca_edu_sv/IQC8MFZd_i48Qru6ObAMCm1CAaD8jVA3bIfMu20oug8pN_A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QRWvYN 
