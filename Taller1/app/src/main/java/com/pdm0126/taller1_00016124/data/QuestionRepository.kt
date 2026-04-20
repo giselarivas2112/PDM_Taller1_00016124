@@ -1,4 +1,6 @@
-package com.pdm0126.taller1_00016124.model
+package com.pdm0126.taller1_00016124.data
+
+import com.pdm0126.taller1_00016124.model.Question
 
 val questionList = listOf(
     Question(

@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import com.pdm0126.taller1_00016124.views.Screen
 import com.pdm0126.taller1_00016124.ui.theme.AndroidPediaByRivasTheme
 import com.pdm0126.taller1_00016124.views.QuizScreen
 import com.pdm0126.taller1_00016124.views.ResultScreen
@@ -23,19 +24,19 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidPediaByRivasTheme {
 
-                var screen by rememberSaveable { mutableStateOf("welcome") }
+                var screen by rememberSaveable { mutableStateOf(Screen.WELCOME) }
                 var currentQuestionIndex by rememberSaveable { mutableIntStateOf(0) }
                 var score by rememberSaveable { mutableIntStateOf(0) }
 
                 when (screen) {
 
-                    "welcome" -> WelcomeScreen(
+                    Screen.WELCOME -> WelcomeScreen(
                         alIniciarQuiz = {
-                            screen = "quiz"
+                            screen = Screen.QUIZ
                         }
                     )
 
-                    "quiz" -> QuizScreen(
+                    Screen.QUIZ -> QuizScreen(
                         questionIndex = currentQuestionIndex,
                         score = score,
                         alResponder = { esCorrecta ->
@@ -45,17 +46,17 @@ class MainActivity : ComponentActivity() {
                             if (currentQuestionIndex < 2) {
                                 currentQuestionIndex++
                             } else {
-                                screen = "result"
+                                screen = Screen.RESULT
                             }
                         }
                     )
 
-                    "result" -> ResultScreen(
+                    Screen.RESULT -> ResultScreen(
                         score = score,
                         alReiniciar = {
                             score = 0
                             currentQuestionIndex = 0
-                            screen = "welcome"
+                            screen = Screen.WELCOME
                         }
                     )
                 }
